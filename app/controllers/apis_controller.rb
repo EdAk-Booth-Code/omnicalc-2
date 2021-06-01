@@ -1,6 +1,10 @@
 class ApisController < ApplicationController
 
-    def street_to_coords_results
+  def street_to_coords_input
+    render({:template => "/apis/street_to_coords_input.html.erb"})
+  end
+  
+  def street_to_coords_results
       # Getting the user content
       @user_input_address = params.fetch("user_street_address")
 
@@ -24,5 +28,13 @@ class ApisController < ApplicationController
       render({:template => "/apis/street_to_coords_results.html.erb"})
     end
 
+  def text_translate
+    render({:template => "/apis/text_translator_input.html.erb"})
+  end
+
+  def text_translate_results
+    @body = params.fetch("body")
+    render({:template => "/apis/text_translator_resuls.html.erb"})
+  end
 
 end

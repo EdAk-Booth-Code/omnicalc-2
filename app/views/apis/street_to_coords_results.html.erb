@@ -1,11 +1,27 @@
 <h1> Street to Coordinates</h1>
 
 <p>
-  <%=  @user_input_address%>
+  
 </p>
 
 <div>
-  <%=  @lat %>
+  <dl>
+  <dt>Street Address</dt>
+  <dd>  
+    <%=  @user_input_address%>
+  </dd>
 
-  <%=  @long %>
+  <dt>Latitude</dt>
+  <dd> 
+    <%=@lat%> 
+  </dd>
+
+  <dt>Longitude</dt>
+  <dd> 
+    <%= @long%>
+  </dd>
+</dl>
+  
+
+  
 </div>
